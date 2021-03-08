@@ -50,11 +50,6 @@ def run_assistant():
         info = wikipedia.summary(person, 2)
         print(info)
         talk(info)
-    elif 'what is' in command:
-        search_query = command.replace('what is', '')
-        info = wikipedia.summary(search_query, 2)
-        print(info)
-        talk(info)
 
 
 run_assistant()
