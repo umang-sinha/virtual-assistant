@@ -1,3 +1,4 @@
+import pywhatkit
 import speech_recognition as sr
 import pyttsx3
 
@@ -35,6 +36,7 @@ def run_assistant():
         song = command.replace('play', '')
         print('playing' + song)
         talk('playing' + song)
+        pywhatkit.playonyt(song)
 
 
 run_assistant()
