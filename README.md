@@ -19,3 +19,9 @@
     ~~~~
     pip install PyAudio
     ~~~~
+  
+- [pywhatkit 3.9](https://pypi.org/project/pywhatkit/)
+
+  ~~~
+  pip install pywhatkit
+  ~~~
