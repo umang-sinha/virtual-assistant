@@ -6,8 +6,6 @@
 
 ### List of Commands:
 
-</br>
-
 - say ```'play'``` followed by a song name or an artist's name (for example: ```play Lithium by Nirvana```). This will open a new tab in your default browser and play that particular song on YouTube.
 
 - say ```'who is'``` followed by a person's name (for example: ```who is Donald Trump```). The assistant will fetch information from Wikepedia and read it aloud.
@@ -19,8 +17,6 @@
 </br>
 
 ### Libraries used:
-
-</br>
 
 - [SpeechRecognition 3.8.1](https://pypi.org/project/SpeechRecognition/)
   
