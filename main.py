@@ -5,6 +5,8 @@ listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
+engine.say("Hi! I am Alexa, your virtual assistant. What can I do for you?")
+engine.runAndWait()
 
 
 def talk(text):
@@ -20,17 +22,19 @@ def take_command():
             print('Listening 👂...')
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
-            command = command.lower()
-            talk(command)
+            print(command)
     except:
-        print('Something went wrong')
-        return command
+        command = ''
+        engine.say('Sorry something went wrong')
+    return command
 
 
-def introductory_greeting():
-    engine.say("Hi! I am Alexa, your virtual assistant. What can I do for you?")
-    engine.runAndWait()
+def run_assistant():
+    command = take_command()
+    if 'play' in command:
+        song = command.replace('play', '')
+        print('playing' + song)
+        talk('playing' + song)
 
 
-introductory_greeting()
-take_command()
+run_assistant()
