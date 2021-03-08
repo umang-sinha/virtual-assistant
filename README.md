@@ -12,7 +12,7 @@
 
 - say ```'what's the time?'```. The assistant will speak out the current time for you.
 
-   (I'll be adding more commands to this list)
+   (I'll be adding more commands that the assistant can perform)
 
 </br>
 
