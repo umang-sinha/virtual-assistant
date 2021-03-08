@@ -1,6 +1,7 @@
 import pywhatkit
 import speech_recognition as sr
 import pyttsx3
+import datetime
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
@@ -23,6 +24,7 @@ def take_command():
             print('Listening 👂...')
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
+            command = command.lower()
             print(command)
     except:
         command = ''
@@ -37,6 +39,10 @@ def run_assistant():
         print('playing' + song)
         talk('playing' + song)
         pywhatkit.playonyt(song)
+    elif "what's the time" in command:
+        time = datetime.datetime.now().strftime('%I %M %p')
+        print('The time is ' + time)
+        talk('The time is ' + time)
 
 
 run_assistant()
