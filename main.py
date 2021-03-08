@@ -30,7 +30,7 @@ def take_command():
             print(command)
     except:
         command = ''
-        engine.say('Sorry something went wrong')
+        print('Sorry something went wrong')
     return command
 
 
@@ -54,4 +54,5 @@ def run_assistant():
         talk("Sorry I couldn't hear you")
 
 
-run_assistant()
+while True:
+    run_assistant()
