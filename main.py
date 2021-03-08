@@ -9,6 +9,10 @@ try:
         #    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
         voice = listener.listen(source)
         command = listener.recognize_google(voice)
-        print(command)
+        command = command.lower()
+        if 'alexa' in command:
+            print(command)
+        else:
+            print("Sorry I couldn't recognize you")
 except:
     print('Something went wrong')
