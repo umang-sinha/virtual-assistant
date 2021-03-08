@@ -18,9 +18,5 @@ try:
         command = listener.recognize_google(voice)
         command = command.lower()
         print(command)
-        if 'alexa' in command:
-            print(command)
-        else:
-            print("Sorry I couldn't recognize you")
 except:
     print('Something went wrong')
