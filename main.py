@@ -9,7 +9,7 @@ listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
-engine.say("Hi! I am Alexa, your virtual assistant. What can I do for you?")
+engine.say("Hi! I am your virtual assistant. What can I do for you?")
 engine.runAndWait()
 
 
