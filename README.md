@@ -8,7 +8,7 @@
 
 - say ```'play'``` followed by a song name or an artist's name (for example: ```play Lithium by Nirvana```). This will open a new tab in your default browser and play that particular song on YouTube.
 
-- say ```'who is'``` followed by a person's name (for example: ```who is Donald Trump```). The assistant will fetch information from Wikepedia and read it aloud.
+- say ```'who is'``` followed by a person's name (for example: ```who is Donald Trump```). The assistant will fetch information from Wikipedia and read it aloud.
 
 - say ```'what's the time?'```. The assistant will speak out the current time for you.
 
