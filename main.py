@@ -3,6 +3,8 @@ import speech_recognition as sr
 import pyttsx3
 import datetime
 
+import wikipedia
+
 listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -43,6 +45,16 @@ def run_assistant():
         time = datetime.datetime.now().strftime('%I %M %p')
         print('The time is ' + time)
         talk('The time is ' + time)
+    elif 'who is' in command:
+        person = command.replace('who is', '')
+        info = wikipedia.summary(person, 2)
+        print(info)
+        talk(info)
+    elif 'what is' in command:
+        search_query = command.replace('what is', '')
+        info = wikipedia.summary(search_query, 2)
+        print(info)
+        talk(info)
 
 
 run_assistant()
