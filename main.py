@@ -50,6 +50,8 @@ def run_assistant():
         info = wikipedia.summary(person, 2)
         print(info)
         talk(info)
+    else:
+        talk("Sorry I couldn't hear you")
 
 
 run_assistant()
